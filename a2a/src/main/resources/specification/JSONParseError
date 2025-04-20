@@ -1,0 +1,40 @@
+{
+        "properties": {
+          "code": {
+            "const": -32700,
+            "default": -32700,
+            "description": "Error code",
+            "examples": [
+              -32700
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Invalid JSON payload",
+            "default": "Invalid JSON payload",
+            "description": "A short description of the error",
+            "examples": [
+              "Invalid JSON payload"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "JSONParseError",
+        "type": "object"
+      }

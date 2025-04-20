@@ -1,0 +1,82 @@
+{
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Name"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Description"
+          },
+          "parts": {
+            "items": {
+              "$ref": "Part"
+            },
+            "title": "Parts",
+            "type": "array"
+          },
+          "index": {
+            "type": "integer",
+            "default": 0,
+            "title": "Index"
+          },
+          "append": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Append"
+          },
+          "lastChunk": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "LastChunk"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "parts"
+        ],
+        "title": "Artifact",
+        "type": "object"
+      }

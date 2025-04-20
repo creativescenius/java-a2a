@@ -1,0 +1,36 @@
+{
+        "properties": {
+          "code": {
+            "const": -32003,
+            "default": -32003,
+            "description": "Error code",
+            "examples": [
+              -32003
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Push Notification is not supported",
+            "default": "Push Notification is not supported",
+            "description": "A short description of the error",
+            "examples": [
+              "Push Notification is not supported"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "const": null,
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ],
+        "title": "PushNotificationNotSupportedError",
+        "type": "object"
+      }

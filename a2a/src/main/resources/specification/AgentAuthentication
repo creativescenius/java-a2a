@@ -1,0 +1,28 @@
+{
+        "properties": {
+          "schemes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Schemes",
+            "type": "array"
+          },
+          "credentials": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Credentials"
+          }
+        },
+        "required": [
+          "schemes"
+        ],
+        "title": "AgentAuthentication",
+        "type": "object"
+      }

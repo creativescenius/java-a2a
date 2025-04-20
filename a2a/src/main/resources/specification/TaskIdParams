@@ -1,0 +1,26 @@
+ {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "title": "TaskQueryParams",
+        "type": "object"
+      }

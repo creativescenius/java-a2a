@@ -1,0 +1,21 @@
+{
+        "properties": {
+          "streaming": {
+            "default": false,
+            "title": "Streaming",
+            "type": "boolean"
+          },
+          "pushNotifications": {
+            "default": false,
+            "title": "PushNotifications",
+            "type": "boolean"
+          },
+          "stateTransitionHistory": {
+            "default": false,
+            "title": "Statetransitionhistory",
+            "type": "boolean"
+          }
+        },
+        "title": "AgentCapabilities",
+        "type": "object"
+      }

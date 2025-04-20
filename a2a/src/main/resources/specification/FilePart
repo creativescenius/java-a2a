@@ -1,0 +1,35 @@
+{
+        "properties": {
+          "type": {
+            "const": "file",
+            "default": "file",
+            "description": "Type of the part",
+            "examples": [
+              "file"
+            ],
+            "title": "Type",
+            "type": "string"
+          },
+          "file": {
+            "$ref": "FileContent"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "FilePart",
+        "type": "object"
+      }

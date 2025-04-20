@@ -1,0 +1,23 @@
+{
+        "oneOf": [
+          {
+            "$ref": "SendTaskRequest"
+          },
+          {
+            "$ref": "GetTaskRequest"
+          },
+          {
+            "$ref": "CancelTaskRequest"
+          },
+          {
+            "$ref": "SetTaskPushNotificationRequest"
+          },
+          {
+            "$ref": "GetTaskPushNotificationRequest"
+          },
+          {
+            "$ref": "TaskResubscriptionRequest"
+          }
+        ],
+        "title": "A2ARequest"
+      }

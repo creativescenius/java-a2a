@@ -1,0 +1,40 @@
+{
+        "properties": {
+          "code": {
+            "const": -32602,
+            "default": -32602,
+            "description": "Error code",
+            "examples": [
+              -32602
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Invalid parameters",
+            "default": "Invalid parameters",
+            "description": "A short description of the error",
+            "examples": [
+              "Invalid parameters"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "InvalidParamsError",
+        "type": "object"
+      }

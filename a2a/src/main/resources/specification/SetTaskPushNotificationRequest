@@ -1,0 +1,39 @@
+ {
+        "properties": {
+          "jsonrpc": {
+            "const": "2.0",
+            "default": "2.0",
+            "title": "Jsonrpc",
+            "type": "string"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "method": {
+            "const": "tasks/pushNotification/set",
+            "default": "tasks/pushNotification/set",
+            "title": "Method",
+            "type": "string"
+          },
+          "params": {
+            "$ref": "TaskPushNotificationConfig"
+          }
+        },
+        "required": [
+          "method",
+          "params"
+        ],
+        "title": "SetTaskPushNotificationRequest",
+        "type": "object"
+      }

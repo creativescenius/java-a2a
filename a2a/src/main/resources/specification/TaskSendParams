@@ -1,0 +1,57 @@
+{
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "sessionId": {
+            "title": "Sessionid",
+            "type": "string"
+          },
+          "message": {
+            "$ref": "Message"
+          },
+          "pushNotification": {
+            "anyOf": [
+              {
+                "$ref": "PushNotificationConfig"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "historyLength": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "HistoryLength"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "id",
+          "message"
+        ],
+        "title": "TaskSendParams",
+        "type": "object"
+      }

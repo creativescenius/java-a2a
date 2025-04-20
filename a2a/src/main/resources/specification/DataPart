@@ -1,0 +1,37 @@
+{
+        "properties": {
+          "type": {
+            "const": "data",
+            "default": "data",
+            "description": "Type of the part",
+            "examples": [
+              "data"
+            ],
+            "title": "Type",
+            "type": "string"
+          },
+          "data": {
+            "additionalProperties": {},
+            "title": "Data",
+            "type": "object"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "title": "DataPart",
+        "type": "object"
+      }

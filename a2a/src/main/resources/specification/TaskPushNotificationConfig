@@ -1,0 +1,17 @@
+{
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "pushNotificationConfig": {
+            "$ref": "PushNotificationConfig"
+          }
+        },
+        "required": [
+          "id",
+          "pushNotificationConfig"
+        ],
+        "title": "TaskPushNotificationConfig",
+        "type": "object"
+      }

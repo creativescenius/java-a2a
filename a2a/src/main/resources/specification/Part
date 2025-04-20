@@ -1,0 +1,14 @@
+{
+        "anyOf": [
+          {
+            "$ref": "TextPart"
+          },
+          {
+            "$ref": "FilePart"
+          },
+          {
+            "$ref": "DataPart"
+          }
+        ],
+        "title": "Part"
+      }

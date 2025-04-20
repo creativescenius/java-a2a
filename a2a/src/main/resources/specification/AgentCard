@@ -1,0 +1,101 @@
+{
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Description"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "provider": {
+            "anyOf": [
+              {
+                "$ref": "AgentProvider"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "version": {
+            "title": "Version",
+            "type": "string"
+          },
+          "documentationUrl": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Documentationurl"
+          },
+          "capabilities": {
+            "$ref": "AgentCapabilities"
+          },
+          "authentication": {
+            "anyOf": [
+              {
+                "$ref": "AgentAuthentication"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "defaultInputModes": {
+            "default": [
+              "text"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "title": "Defaultinputmodes",
+            "type": "array"
+          },
+          "defaultOutputModes": {
+            "default": [
+              "text"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "title": "Defaultoutputmodes",
+            "type": "array"
+          },
+          "skills": {
+            "items": {
+              "$ref": "AgentSkill"
+            },
+            "title": "Skills",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "url",
+          "version",
+          "capabilities",
+          "skills"
+        ],
+        "title": "AgentCard",
+        "type": "object"
+      }

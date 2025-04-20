@@ -1,0 +1,36 @@
+{
+        "properties": {
+          "code": {
+            "const": -32002,
+            "default": -32002,
+            "description": "Error code",
+            "examples": [
+              -32002
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Task cannot be canceled",
+            "default": "Task cannot be canceled",
+            "description": "A short description of the error",
+            "examples": [
+              "Task cannot be canceled"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "const": null,
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ],
+        "title": "TaskNotCancelableError",
+        "type": "object"
+      }

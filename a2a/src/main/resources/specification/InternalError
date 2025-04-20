@@ -1,0 +1,40 @@
+{
+        "properties": {
+          "code": {
+            "const": -32603,
+            "default": -32603,
+            "description": "Error code",
+            "examples": [
+              -32603
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Internal error",
+            "default": "Internal error",
+            "description": "A short description of the error",
+            "examples": [
+              "Internal error"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "InternalError",
+        "type": "object"
+      }

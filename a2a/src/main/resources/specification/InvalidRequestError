@@ -1,0 +1,40 @@
+{
+        "properties": {
+          "code": {
+            "const": -32600,
+            "default": -32600,
+            "description": "Error code",
+            "examples": [
+              -32600
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Request payload validation error",
+            "default": "Request payload validation error",
+            "description": "A short description of the error",
+            "examples": [
+              "Request payload validation error"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "InvalidRequestError",
+        "type": "object"
+      }

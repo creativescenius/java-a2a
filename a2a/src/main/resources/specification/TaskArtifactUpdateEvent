@@ -1,0 +1,30 @@
+{
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "artifact": {
+            "$ref": "Artifact"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "id",
+          "artifact"
+        ],
+        "title": "TaskArtifactUpdateEvent",
+        "type": "object"
+      }

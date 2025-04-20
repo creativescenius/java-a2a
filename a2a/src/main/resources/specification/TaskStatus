@@ -1,0 +1,28 @@
+{
+        "properties": {
+          "state": {
+            "$ref": "TaskState"
+          },
+          "message": {
+            "anyOf": [
+              {
+                "$ref": "Message"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "timestamp": {
+            "format": "date-time",
+            "title": "Timestamp",
+            "type": "string"
+          }
+        },
+        "required": [
+          "state"
+        ],
+        "title": "TaskStatus",
+        "type": "object"
+      }

@@ -1,0 +1,36 @@
+ {
+        "properties": {
+          "type": {
+            "const": "text",
+            "default": "text",
+            "description": "Type of the part",
+            "examples": [
+              "text"
+            ],
+            "title": "Type",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "title": "TextPart",
+        "type": "object"
+      }

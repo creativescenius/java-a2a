@@ -1,0 +1,14 @@
+{
+        "description": "An enumeration.",
+        "enum": [
+          "submitted",
+          "working",
+          "input-required",
+          "completed",
+          "canceled",
+          "failed",
+          "unknown"
+        ],
+        "title": "TaskState",
+        "type": "string"
+      }

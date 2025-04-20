@@ -1,0 +1,35 @@
+{
+        "properties": {
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "token": {
+            "title": "Token",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "authentication": {
+            "anyOf": [
+              {
+                "$ref": "AuthenticationInfo"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "title": "PushNotificationConfig",
+        "type": "object"
+      }

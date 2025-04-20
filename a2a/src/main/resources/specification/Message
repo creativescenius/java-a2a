@@ -1,0 +1,38 @@
+{
+        "properties": {
+          "role": {
+            "enum": [
+              "user",
+              "agent"
+            ],
+            "title": "Role",
+            "type": "string"
+          },
+          "parts": {
+            "items": {
+              "$ref": "Part"
+            },
+            "title": "Parts",
+            "type": "array"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "role",
+          "parts"
+        ],
+        "title": "Message",
+        "type": "object"
+      }

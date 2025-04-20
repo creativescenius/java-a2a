@@ -1,0 +1,36 @@
+{
+        "properties": {
+          "code": {
+            "const": -32601,
+            "default": -32601,
+            "description": "Error code",
+            "examples": [
+              -32601
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Method not found",
+            "default": "Method not found",
+            "description": "A short description of the error",
+            "examples": [
+              "Method not found"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "const": null,
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ],
+        "title": "MethodNotFoundError",
+        "type": "object"
+      }

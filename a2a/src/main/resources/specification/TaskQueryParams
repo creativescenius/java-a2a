@@ -1,0 +1,38 @@
+{
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "historyLength": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "HistoryLength"
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {},
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Metadata"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "title": "TaskQueryParams",
+        "type": "object"
+      }

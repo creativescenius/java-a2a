@@ -1,0 +1,36 @@
+{
+        "properties": {
+          "code": {
+            "const": -32001,
+            "default": -32001,
+            "description": "Error code",
+            "examples": [
+              -32001
+            ],
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "const": "Task not found",
+            "default": "Task not found",
+            "description": "A short description of the error",
+            "examples": [
+              "Task not found"
+            ],
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "const": null,
+            "default": null,
+            "title": "Data"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "data"
+        ],
+        "title": "TaskNotFoundError",
+        "type": "object"
+      }

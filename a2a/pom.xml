@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.creativescenius</groupId>
+        <artifactId>a2a-parent</artifactId>
+        <version>0.2-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>a2a</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Java A2A</name>
+    <description>Java implementation of the Agent2Agent (A2A) protocol, enabling seamless integration between AI
+        agents
+    </description>
+    <url>https://github.com/modelcontextprotocol/java-sdk</url>
+
+    <scm>
+        <url>https://github.com/creativescenius/java-a2a</url>
+        <connection>git://github.com/creativescenius/java-a2a.git</connection>
+        <developerConnection>git@github.com/creativescenius/java-a2a.git</developerConnection>
+    </scm>
+
+    <properties>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>1.2.2</version>
+                <configuration>
+                    <sourceDirectory>${basedir}/src/main/resources/specification/</sourceDirectory>
+                    <sourceType>jsonschema</sourceType>
+                    <targetPackage>com.creativescenius.a2a.spec</targetPackage>
+                    <generateBuilders>true</generateBuilders>
+                    <includeGeneratedAnnotation>false</includeGeneratedAnnotation>
+                    <includeConstructors>false</includeConstructors>
+                    <includeToString>false</includeToString>
+                    <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
+                    <includeDynamicBuilders>true</includeDynamicBuilders>
+                    <initializeCollections>true</initializeCollections>
+                    <usePrimitives>true</usePrimitives>
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assert4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+</project>

@@ -1,0 +1,25 @@
+{
+        "properties": {
+          "organization": {
+            "title": "Organization",
+            "type": "string"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Url"
+          }
+        },
+        "required": [
+          "organization"
+        ],
+        "title": "AgentProvider",
+        "type": "object"
+      }
